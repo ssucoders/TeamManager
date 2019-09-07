@@ -1,0 +1,45 @@
+{
+  "name": "teammanager",
+  "version": "1.0.0",
+  "description": "An application for managers to manage their teams",
+  "main": "src/index.js",
+  "dependencies": {
+    "axios": "^0.18.0",
+    "bootstrap": "^4.3.1",
+    "react": "^16.8.6",
+    "react-dom": "^16.8.5",
+    "react-hot-loader": "^4.8.0"
+  },
+  "devDependencies": {
+    "@babel/cli": "^7.2.3",
+    "@babel/core": "^7.4.0",
+    "@babel/preset-env": "^7.4.2",
+    "@babel/preset-react": "^7.0.0",
+    "babel-cli": "^6.26.0",
+    "babel-loader": "^8.0.5",
+    "babel-preset-react": "^6.24.1",
+    "css-loader": "^1.0.1",
+    "style-loader": "^0.23.1",
+    "webpack": "^4.29.6",
+    "webpack-cli": "^3.3.0",
+    "webpack-dev-server": "^3.2.1"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "dev": "webpack-dev-server --mode development",
+    "build": "webpack --mode production"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ssucoders/TeamManager.git"
+  },
+  "keywords": [
+    "react"
+  ],
+  "author": "SSU",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/ssucoders/TeamManager/issues"
+  },
+  "homepage": "https://github.com/ssucoders/TeamManager#readme"
+}
