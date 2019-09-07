@@ -30,15 +30,13 @@ class Teams extends Component{
         return (
             <div>
                 <Header/>
-                <ul className="row">
+                <div class="card-group">
                 {
                     teams.map((el, i)=>{
-                        return (<li key={i} >
-                            <Team item={el} />
-                            </li>)
+                        return (<Team item={el} key={i} />)
                     })
                 }
-                </ul>
+                </div>
         </div>
         )
     }
