@@ -4,6 +4,12 @@ class Team extends Component{
     constructor(props){
         super(props);
         this.state={}
+        this.handleClick = this.handleClick.bind(this)
+    }
+
+    handleClick(e){
+        console.log(this.props.item)
+        this.props.selectaction(this.props.item)
     }
 
     render(){
@@ -11,7 +17,7 @@ class Team extends Component{
         return (
             <React.Fragment>
                 {team?
-                <div className="card">
+                <div className="card" onClick={this.handleClick}>
                     <img src={"/images/teams/"+ team.picture} className="card-img-top" alt="..." />
                     <div className="card-body">
                         <h4 className="card-title">{team.name}</h4>
