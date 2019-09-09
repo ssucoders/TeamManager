@@ -9,7 +9,7 @@ class User extends Component{
     render(){
         let user = this.props.item;
         return (
-            <div>
+            <React.Fragment>
                 {user?
                 <div className="card">
                     <img src={"/images/users/"+ user.picture} className="card-img-top" alt="..." />
@@ -19,7 +19,7 @@ class User extends Component{
                     </div>
                 </div>
             :null}
-            </div>
+            </React.Fragment>
             
         )
     }

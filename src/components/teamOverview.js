@@ -15,25 +15,26 @@ class TeamOverview extends Component{
                 {team?
                     <React.Fragment>
                         <h2>{team.name} Overview</h2>
-                        <div class="card mb-3">
-                            <div class="row no-gutters">
-                                <div class="col-md-4">
-                                    <img src={"/images/teams/"+ team.picture} class="card-img" alt="..." />
+                        <div className="card mb-3">
+                            <div className="row no-gutters">
+                                <div className="col-md-4">
+                                    <img src={"/images/teams/"+ team.picture} className="card-img" alt="..." />
                                 </div>
-                                <div class="col-md-8">
-                                    <div class="card-body">
-                                        <h5 class="card-title">{team.name}</h5>
-                                        <p class="card-text">{team.description}</p>
-                                        <p class="card-text"><small class="text-muted">{team.members.length}</small></p>
+                                <div className="col-md-8">
+                                    <div className="card-body">
+                                        <h5 className="card-title">{team.name}</h5>
+                                        <p className="card-text">{team.description}</p>
+                                        <p className="card-text"><small className="text-muted">{team.members.length}</small></p>
+                                        
                                     </div>
                                 </div>
-                            </div>
+                                </div>
                         </div>
-                        <div className="card-group">
-                            {team.members.map((el, i)=>{
-                                return (<User item={el} key={i} />)
-                            })}
-                        </div>
+                        <div className="card-deck">
+                                        {team.members.map((el, i)=>{
+                                          return (<User item={el} key={i} />)
+                                              })}
+                                    </div>
                     </React.Fragment>
             :null}
             </React.Fragment>

@@ -22,8 +22,11 @@ class Team extends Component{
                     <div className="card-body">
                         <h4 className="card-title">{team.name}</h4>
                         <h5 className="card-text">{team.description}</h5>
-                        <h5 className="card-text">{team.members.length}</h5>
+    
                     </div>
+                    <div className="card-footer">
+                            <h4 className="text-muted">{team.members.length}</h4>
+                        </div>
                 </div>
             :null}
             </React.Fragment>
