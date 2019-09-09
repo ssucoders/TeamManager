@@ -25,7 +25,7 @@ class Team extends Component{
     
                     </div>
                     <div className="card-footer">
-                            <h4 className="text-muted">{team.members.length}</h4>
+                            <small>Members: {team.members.length}</small>
                         </div>
                 </div>
             :null}

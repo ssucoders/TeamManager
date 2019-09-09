@@ -35,7 +35,7 @@ class Teams extends Component {
 
         return (
             <div>
-                <div className="card-deck mt-5" >
+                <div className="card-deck" >
                     {
                         teams.map((el, i) => {
                             return (<Team item={el} key={i} selectaction={this.selectTeam} />)
