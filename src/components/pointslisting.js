@@ -10,12 +10,12 @@ class PointsListing extends Component {
     }
 
     render() {
-        let abc = this.props.data;
+        let data = this.props.data;
         return (
             <React.Fragment>
-                <h5 className="card-text">{abc.type}</h5>
-                <p>{abc.details}
-                    <br /><small>{abc.date}</small>
+                <h5 className="card-text">{data.type}</h5>
+                <p>{data.details}
+                    <br /><small>{data.date}</small>
                 </p>
             </React.Fragment>
 
