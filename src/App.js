@@ -5,13 +5,23 @@ import "./App.css";
 import Teams from "./components/teams"
 import Header from "./components/header";
 import Welcome from "./components/welcome";
-
+import { fetchPointTypes } from "./API"
 
 class App extends Component{
   constructor(props){
     super(props);
+    this.state = {
+      pointTypes: []
+    }
   }
   
+  componentDidMount () {
+    var self = this;
+    fetchPointTypes().then(function (response) {
+      self.setState({pointTypes: response.data})
+    })
+  }
+
   render(){
     return(
       <React.Fragment>
