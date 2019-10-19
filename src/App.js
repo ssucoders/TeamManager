@@ -3,6 +3,8 @@ import {hot} from "react-hot-loader";
 import "./App.css";
 // import UsersList from "./components/userslist"
 import Teams from "./components/teams"
+import Header from "./components/header";
+import Welcome from "./components/welcome";
 
 
 class App extends Component{
@@ -12,10 +14,14 @@ class App extends Component{
   
   render(){
     return(
+      <React.Fragment>
+        <Header/>
       <div className="container-fluid App">
         {/* <UsersList /> */}
+        <Welcome/>
         <Teams />
       </div>
+      </React.Fragment>
     );
   }
 }

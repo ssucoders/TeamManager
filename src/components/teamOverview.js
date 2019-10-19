@@ -24,7 +24,7 @@ class TeamOverview extends Component{
                                     <div className="card-body">
                                         <h5 className="card-title">{team.name}</h5>
                                         <p className="card-text">{team.description}</p>
-                                        <p className="card-text"><small className="text-muted">{team.members.length}</small></p>
+                                        <small>Members: {team.members.length}</small>
                                         
                                     </div>
                                 </div>
