@@ -1,6 +1,11 @@
 
 import React, { Component } from "react";
 
+function getToday(locale) {
+    let today = new Date();
+    return locale? today.toLocaleString(): today.toString()
+}
+
 class Welcome extends Component {
     constructor(props) {
         super(props);
@@ -15,7 +20,7 @@ class Welcome extends Component {
                         <img src="/products/appwork/v131/assets_/img/avatars/1.png" alt="" class="ui-w-50 rounded-circle" />
                         <div class="media-body ml-3">
                             Welcome back, Mike!
-                            <div class="text-muted text-tiny mt-1"><small class="font-weight-normal">Today is Tuesday, 8 February 2018</small></div>
+                            <div class="text-muted text-tiny mt-1"><small class="font-weight-normal">Today is {getToday(true)}</small></div>
                         </div>
                     </h4>
             </React.Fragment>
