@@ -29,7 +29,7 @@ class App extends Component{
       <div className="container-fluid App">
         {/* <UsersList /> */}
         <Welcome/>
-        <Teams />
+        <Teams pointTypes={this.state.pointTypes}/>
       </div>
       </React.Fragment>
     );

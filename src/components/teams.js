@@ -32,7 +32,7 @@ class Teams extends Component {
     render() {
 
         let teams = this.state.teams
-
+        let {pointTypes} = this.props
         return (
             <div>
                 <div className="card-deck" >
@@ -42,7 +42,7 @@ class Teams extends Component {
                         })
                     }
                 </div>
-                <TeamOverview team={this.state.selectedTeam} />
+                <TeamOverview team={this.state.selectedTeam} pointTypes={pointTypes} />
             </div>
         )
     }

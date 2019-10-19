@@ -10,6 +10,7 @@ class TeamOverview extends Component{
 
     render(){
         let team = this.props.team;
+        let {pointTypes} = this.props
         return (
             <React.Fragment>
                 {team?
@@ -32,7 +33,7 @@ class TeamOverview extends Component{
                         </div>
                         <div className="card-deck">
                                         {team.members.map((el, i)=>{
-                                          return (<User item={el} key={i} />)
+                                          return (<User item={el} key={i} pointTypes={pointTypes} />)
                                               })}
                                     </div>
                     </React.Fragment>
