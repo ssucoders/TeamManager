@@ -2,4 +2,60 @@
     margin-top: 65px;
     font-family: Arial, Helvetica, sans-serif;
   }
-  .card-img-top{max-height:380px;}
+  #logo>img{height: 60px;width: 70px;display: block;margin:auto;padding: 5px;}
+  .clear{clear:both;}
+  .logoText{text-align: center;display:block;}
+  .logoText>p{font-size: 12px;}
+  ul{padding: 0px;margin: 0px;}
+  ul>li{list-style-type: none;}
+  #dashboard{padding: 0px;}
+  .players{margin:20px 0px;}
+  .players>blockquote{margin: 0px;font-weight: bold;}
+  #sidebar-wrapper {
+    min-height: 100vh;
+    margin-left: -15rem;
+    -webkit-transition: margin .25s ease-out;
+    -moz-transition: margin .25s ease-out;
+    -o-transition: margin .25s ease-out;
+    transition: margin .25s ease-out;
+  }
+  
+  #sidebar-wrapper .sidebar-heading {
+    padding: 0.875rem 1.25rem;
+    font-size: 1.2rem;
+  }
+  
+  #sidebar-wrapper .list-group {
+    width: 15rem;
+    text-align: center;
+    font-weight: bold;
+  }
+  
+  #page-content-wrapper {
+    min-width: 100vw;
+  }
+  #wrapper.toggled #sidebar-wrapper {
+    margin-left: 0;
+  }
+  
+  @media (min-width: 768px) {
+    #sidebar-wrapper {
+      margin-left: 0;
+    }
+
+    .on{
+      color:#798cfe;
+    }
+  
+    #page-content-wrapper {
+      min-width: 0;
+      width: 100%;
+    }
+  
+    #wrapper.toggled #sidebar-wrapper {
+      margin-left: -15rem;
+    }
+  } 
+
+ 
+ /* #logo{background: url("/public/images/logo.png") no-repeat;height: 40px;width: 40px;display: block;text-indent: -999px;} */

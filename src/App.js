@@ -5,6 +5,7 @@ import "./App.css";
 import Teams from "./components/teams"
 import Header from "./components/header";
 import Welcome from "./components/welcome";
+import DashBoard from "./components/dashboard"
 import { fetchPointTypes } from "./API"
 
 class App extends Component{
@@ -25,11 +26,13 @@ class App extends Component{
   render(){
     return(
       <React.Fragment>
-        <Header/>
+        {/* <Header/> */}
       <div className="container-fluid App">
+      <DashBoard/>
         {/* <UsersList /> */}
-        <Welcome/>
-        <Teams pointTypes={this.state.pointTypes}/>
+        {/* <Welcome/> */}
+        {/* <Teams pointTypes={this.state.pointTypes}/> */}
+
       </div>
       </React.Fragment>
     );
