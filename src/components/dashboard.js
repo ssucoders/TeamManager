@@ -11,120 +11,106 @@ class DashBoard extends Component {
 
         return (
             <React.Fragment>
-                <div className="container">
-                    <div className="row">
-                        <div className="col-md-4">
-                            <div className="row">
-                                <div className="col-md-2"></div>
-                                <div className="col-md-8">
-                                    <a href="#" id="logo" title="My Team">
-                                        <img src="images/logo.png" />
-                                    </a>
-                                    <div className="logoText">
-                                        <b>Top Pick</b>
-                                        <div className="clear"></div>
-                                        <p className="text-muted">A group of young people<br /> with dreams</p>
-                                    </div>
+                <div className="row">
+                    <div className="col-lg-3 leftPanel">
+                        <div className="row">
+                            <a href="#" id="logo" title="My Team">
+                                <img src="images/logo.png" />
+                                <div className="logoText">
+                                    <b>Top Pick</b>
+                                    <p className="text-muted">A group of young people<br /> with dreams</p>
                                 </div>
-                                <div className="col-md-2"></div>
-                            </div>
+                            </a>
                         </div>
-                        <div className="col-md-8">
-                            <p className="h2">
-                                My Team
-                            </p>
-                        </div>
+                        <ul class="nav flex-column">
+                            <li class="nav-item">
+                                <a class="nav-link active" href="#">Active</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="#">Link</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="#">Link</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link disabled" href="#" tabindex="-1" aria-disabled="true">Disabled</a>
+                            </li>
+                        </ul> 
                     </div>
-                    <div className="row">
-                        <div className="col-md-4">
-                            <div className="row">
-                                <div className="col-md-2"></div>
-                                <div className="col-md-8" id="dashboard">
-                                    <div className="d-flex" id="wrapper">
-                                        <div className="bg-light border-right" id="sidebar-wrapper">
-                                            <div className="list-group list-group-flush">
-                                                <a href="#" className="list-group-item list-group-item-action bg-light">Overviews</a>
-                                                <a href="#" className="list-group-item list-group-item-action bg-light  on">My Team</a>
-                                                <a href="#" className="list-group-item list-group-item-action bg-light">Task</a>
-                                                <a href="#" className="list-group-item list-group-item-action bg-light">Report</a>
-                                                <a href="#" className="list-group-item list-group-item-action bg-light">Share</a>
-                                                <a href="#" className="list-group-item list-group-item-action bg-light">Mail</a>
-                                                <a href="#" className="list-group-item list-group-item-action bg-light">Setting</a>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div className="col-md-2"></div>
-                            </div>
-                        </div>
-                        <div className="col-md-8">
+                    <div className="col-lg-9 rightPanel">
+                        <h1>My Teams</h1>
                             <div className="card-deck">
-                                <div className="card">
-                                    <div className="row no-gutters">
-                                        <div className="col-md-8">
-                                            <div className="card-body">
-                                                <h4 className="card-title">28</h4>
-                                                <small className="card-text">Total Team Members</small>
-                                                <p className="card-text"><small className="text-muted">Excellent Designer</small></p>
+                                    <div className="card">
+                                        <div className="row no-gutters">
+                                            <div className="col-md-8">
+                                                <div className="card-body">
+                                                    <h4 className="card-title">28</h4>
+                                                    <p className="card-text"><h5>Total Team Members</h5><small className="text-muted">Excellent Designer</small></p>
+                                                </div>
+                                            </div>
+                                            <div className="col-md-4  mt-5">
+                                                <img src="/images/logo.png" className="card-img-top" alt="..." />
                                             </div>
                                         </div>
-                                        <div className="col-md-4  mt-5">
-                                            <img src="/images/logo.png" className="card-img-top" alt="..." />
+                                    </div>
+                                    <div className="card">
+                                        <div className="row no-gutters">
+                                            <div className="col-md-8">
+                                                <div className="card-body">
+                                                    <h4 className="card-title">12k<small className="text-muted  h6">+26%</small></h4>
+                                                    <small className="card-text">Followers Of The Team</small>
+                                                </div>
+                                            </div>
+                                            <div className="col-md-4 mt-5">
+                                                <img src="/images/logo.png" className="card-img-top" alt="..." />
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div className="card">
+                                        <div className="row no-gutters">
+                                            <div className="col-md-8">
+                                                <div className="card-body">
+                                                    <h4 className="card-title">12</h4>
+                                                    <ul className="card-text"><b>Tasks</b>
+                                                        <li><small>UI/UX</small></li>
+                                                        <li><small>Painting</small></li>
+                                                        <li><small>Brand Design</small></li>
+                                                        <li><small>Animation</small></li>
+                                                    </ul>
+                                                </div>
+                                            </div>
+                                            <div className="col-md-4 mt-5">
+                                                <img src="/images/logo.png" className="card-img-top" alt="..." />
+                                            </div>
                                         </div>
                                     </div>
                                 </div>
-                                <div className="card">
-                                    <div className="row no-gutters">
-                                        <div className="col-md-8">
-                                            <div className="card-body">
-                                                <h4 className="card-title">12k<small className="text-muted  h6">+26%</small></h4>
-                                                <small className="card-text">Followers Of The Team</small>
-                                            </div>
-                                        </div>
-                                        <div className="col-md-4 mt-5">
-                                            <img src="/images/logo.png" className="card-img-top" alt="..." />
-                                        </div>
-                                    </div>
-                                </div>
-                                <div className="card">
-                                    <div className="row no-gutters">
-                                        <div className="col-md-8">
-                                            <div className="card-body">
-                                                <h4 className="card-title">12</h4>
-                                                <ul className="card-text"><b>Tasks</b>
-                                                    <li><small>UI/UX</small></li>
-                                                    <li><small>Painting</small></li>
-                                                    <li><small>Brand Design</small></li>
-                                                    <li><small>Animation</small></li>
-                                                </ul>
-                                            </div>
-                                        </div>
-                                        <div className="col-md-4 mt-5">
-                                            <img src="/images/logo.png" className="card-img-top" alt="..." />
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                            <div className="clear"></div>
-                            <div className="players">
-                                <blockquote className="blockquote">
-                                    <p className="mb-0">Players</p>
-                                    <footer className="blockquote-footer">0ctober 29,2019 Tuesday</footer>
-                                </blockquote>
-                            </div>
+                            <h2>Players</h2>
+                            <small>October 29,2019 Tuesday</small>
                             <div className="card-deck">
                                 <div className="card">
                                     <div className="card-body">
                                         <div className="row no-gutters">
-                                            <div className="col-md-3">
+                                            <div className="col-md-2">
                                                 <img src="/images/logo.png" className="card-img-top" alt="..." />
                                             </div>
-                                            <div className="col-md-8">
-                                               <span>ubaid awan</span>
-                                               <small>abc@gmail.com</small>
+                                            <div className="col-md-9">
+                                               <h5>ubaid awan</h5>
+                                               <p>abc@gmail.com</p>
                                             </div>
-                                            <div className="col-md-3">
-                                                <a href="#">...</a>
+                                            <div className="col-md-1">
+<div class="btn-group">
+  <a href="#" class="" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+    ...
+  </a>
+  <div class="dropdown-menu">
+    <a class="dropdown-item" href="#">Action</a>
+    <a class="dropdown-item" href="#">Another action</a>
+    <a class="dropdown-item" href="#">Something else here</a>
+    <div class="dropdown-divider"></div>
+    <a class="dropdown-item" href="#">Separated link</a>
+  </div>
+</div>
                                             </div>
                                         </div>
                                         <div className="clear"></div>
@@ -173,7 +159,6 @@ class DashBoard extends Component {
                                     </div>
                                 </div>
                             </div>
-                        </div>
                     </div>
                 </div>
             </React.Fragment>

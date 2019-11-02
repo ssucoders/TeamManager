@@ -1,16 +1,15 @@
 .App {
-    margin-top: 65px;
+    margin-top: 12px;
     font-family: Arial, Helvetica, sans-serif;
   }
   #logo>img{height: 60px;width: 70px;display: block;margin:auto;padding: 5px;}
   .clear{clear:both;}
   .logoText{text-align: center;display:block;}
   .logoText>p{font-size: 12px;}
-  ul{padding: 0px;margin: 0px;}
-  ul>li{list-style-type: none;}
+  /* ul{padding: 0px;margin: 0px;}
+  ul>li{list-style-type: none;} */
   #dashboard{padding: 0px;}
-  .players{margin:20px 0px;}
-  .players>blockquote{margin: 0px;font-weight: bold;}
+ 
   #sidebar-wrapper {
     min-height: 100vh;
     margin-left: -15rem;
