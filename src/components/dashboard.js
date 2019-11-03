@@ -24,36 +24,42 @@ class DashBoard extends Component {
                         </div>
                         <ul className="nav flex-column ml-5 mt-4">
                             <li className="nav-item">
-                                <a className="nav-link" href="#">Overviews</a>
+                                <a className="nav-link text-muted" href="#">Overviews</a>
                             </li>
                             <li className="nav-item">
-                                <a className="nav-link active" href="#">My Teams</a>
+                                <a className="nav-link" href="#">My Teams</a>
                             </li>
                             <li className="nav-item">
-                                <a className="nav-link" href="#">Tasks</a>
+                                <a className="nav-link text-muted" href="#">Tasks</a>
                             </li>
                             <li className="nav-item">
-                                <a className="nav-link" href="#">Report</a>
+                                <a className="nav-link text-muted" href="#">Report</a>
                             </li>
                             <li className="nav-item">
-                                <a className="nav-link " href="#" >Share</a>
+                                <a className="nav-link text-muted" href="#" >Share</a>
                             </li>
                             <li className="nav-item">
-                                <a className="nav-link " href="#" >Mail</a>
+                                <a className="nav-link text-muted" href="#" >Mail</a>
                             </li>
                             <li className="nav-item">
-                                <a className="nav-link " href="#" >Settings</a>
+                                <a className="nav-link text-muted" href="#" >Settings</a>
                             </li>
                         </ul>
                     </div>
                     <div className="col-lg-9 rightPanel">
-                        <h1 className="ml-3 font-weight-bold">My Teams</h1>
+                        <div className="row">
+                            <h1 className="ml-3 font-weight-bold">My Teams</h1>
+                            <div className="topDataRight ml-auto">
+                                <small className="text-muted">Hi, Lundy</small>
+                                <a href="#" className="topImage"><img src="images/logo.png"/></a>
+                            </div>
+                        </div>
                         <div className="card-deck upperDecks">
                             <div className="card">
                                 <div className="row no-gutters">
                                     <div className="col-md-8">
                                         <div className="card-body">
-                                            <h4 className="card-title">28</h4>
+                                            <h4 className="card-title text-primary">28</h4>
                                             <h6 className="card-text topText">Total Team Members</h6>
                                             <p className="text-muted crdText mb-0"><small>Excellent Designer</small></p>
                                         </div>
@@ -67,7 +73,7 @@ class DashBoard extends Component {
                                 <div className="row no-gutters">
                                     <div className="col-md-8">
                                         <div className="card-body">
-                                            <h4 className="card-title">12k<small className="text-muted  h6">+26%</small></h4>
+                                            <h4 className="card-title text-danger">12k<small className="text-muted perText">+26%</small></h4>
                                             <h6 className="card-text topText">Followers Of The Team</h6>
                                         </div>
                                     </div>
@@ -80,7 +86,7 @@ class DashBoard extends Component {
                                 <div className="row no-gutters">
                                     <div className="col-md-8">
                                         <div className="card-body">
-                                            <h4 className="card-title">12</h4>
+                                            <h4 className="card-title text-primary">12</h4>
                                             <div className="card-text">
                                                 <h6 className="font-weight-bold">Team Tasks</h6>
                                                 <ul className="pl-3">
@@ -132,17 +138,17 @@ class DashBoard extends Component {
                                     <div className="row mt-2">
                                         <div className="col-md-4">
                                             <small className="font-weight-bold lowerText">Followers</small><br />
-                                            <small className="font-weight-bold">12K</small>
+                                            <small className="font-weight-bold text-danger">12K</small>
                                             <p className="bg-light rounded-pill"><small className="font-weight-bold lowerText p-2">Top 1</small></p>
                                         </div>
                                         <div className="col-md-4">
                                             <small className="font-weight-bold lowerText">Works</small><br />
-                                            <small className="font-weight-bold">12</small>
+                                            <small className="font-weight-bold text-primary">12</small>
 
                                         </div>
                                         <div className="col-md-4">
                                             <small className="font-weight-bold lowerText">Task</small><br />
-                                            <small className="font-weight-bold">02</small>
+                                            <small className="font-weight-bold text-primary">02</small>
                                         </div>
                                     </div>
                                     <div className="row mt-2">
@@ -196,17 +202,17 @@ class DashBoard extends Component {
                                     <div className="row mt-2">
                                         <div className="col-md-4">
                                             <small className="font-weight-bold lowerText">Followers</small><br />
-                                            <small className="font-weight-bold">11K</small>
+                                            <small className="font-weight-bold text-danger">11K</small>
                                             <p className="bg-light rounded-pill"><small className="font-weight-bold lowerText p-2">Top 2</small></p>
                                         </div>
                                         <div className="col-md-4">
                                             <small className="font-weight-bold lowerText">Works</small><br />
-                                            <small className="font-weight-bold">11</small>
+                                            <small className="font-weight-bold text-primary">11</small>
 
                                         </div>
                                         <div className="col-md-4">
                                             <small className="font-weight-bold lowerText">Task</small><br />
-                                            <small className="font-weight-bold">02</small>
+                                            <small className="font-weight-bold text-primary">02</small>
                                         </div>
                                     </div>
                                     <div className="row">
@@ -260,17 +266,17 @@ class DashBoard extends Component {
                                     <div className="row mt-2">
                                         <div className="col-md-4">
                                             <small className="font-weight-bold lowerText">Followers</small><br />
-                                            <small className="font-weight-bold">10K</small>
+                                            <small className="font-weight-bold text-danger">10K</small>
                                             <p className="bg-light rounded-pill"><small className="font-weight-bold lowerText p-2">Top 3</small></p>
                                         </div>
                                         <div className="col-md-4">
                                             <small className="font-weight-bold lowerText">Works</small><br />
-                                            <small className="font-weight-bold">10</small>
+                                            <small className="font-weight-bold text-primary">10</small>
 
                                         </div>
                                         <div className="col-md-4">
                                             <small className="font-weight-bold lowerText">Task</small><br />
-                                            <small className="font-weight-bold">02</small>
+                                            <small className="font-weight-bold text-primary">02</small>
                                         </div>
                                     </div>
                                     <div className="row">

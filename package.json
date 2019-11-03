@@ -4,6 +4,7 @@
   "description": "An application for managers to manage their teams",
   "main": "src/index.js",
   "dependencies": {
+    "@fortawesome/fontawesome-free": "^5.11.2",
     "axios": "^0.18.0",
     "bootstrap": "^4.3.1",
     "react": "^16.8.6",
