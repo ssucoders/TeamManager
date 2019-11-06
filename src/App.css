@@ -8,7 +8,7 @@
   .topImage>img{height: 40px;width: 40px;}
   .topDataRight>small{font-size: xx-small;}
   .perText{font-size: x-small;}
-  .topDataRight{width: 20%;}
+  .topDataRight{width: 12%;}
   .card-body{padding: .85rem;}
   .topText{font-size:11px;font-weight: bold;}
   .lowerText{font-size:10px;}
@@ -21,7 +21,7 @@
  .bar3{width: 45%;}
  .bar2{width: 36%;}
  .players{line-height: 1px;font-size: 12px;}
- .upperDecks{margin: 45px  0px;}
+ .upperDecks{margin-top: 45px;margin-bottom: 45px;}
  .lowerDeckText{line-height: 0px;font-size: small;}
   #sidebar-wrapper {
     min-height: 100vh;
