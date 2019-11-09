@@ -13,7 +13,6 @@ class DashBoard extends Component {
     }
 
     render() {
-
         return (
             <React.Fragment>
                 <div className="row">
