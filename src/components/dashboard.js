@@ -1,10 +1,8 @@
 
 import React, { Component } from "react";
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
-import { faCoffee } from '@fortawesome/free-regular-svg-icons'
 import Logo from "./logo";
 import Sidenavbar from "./sidenav";
-import MyTeam from "./myteam";
+import MyTeam from "./info";
 import Players from "./players"
 
 
@@ -32,8 +30,6 @@ class DashBoard extends Component {
                             </div>
                         </div>
                         <MyTeam />
-                        <h2 className="font-weight-bold">Players</h2>
-                        <p className="players text-muted"><small>July 03rd 2018 Friday</small></p>
                         <Players/>
                     </div>
                 </div>

@@ -1,5 +1,6 @@
 import React, { Component } from "react";
-
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
+import { faCoffee } from '@fortawesome/free-regular-svg-icons'
 class Sidenavbar extends Component {
     constructor(props) {
         super(props);
@@ -11,7 +12,7 @@ class Sidenavbar extends Component {
                     <a className="nav-link text-muted" href="#">Overviews</a>
                 </li>
                 <li className="nav-item">
-                    <a className="nav-link" href="#">My Teams</a>
+                    <a className="nav-link" href="#"><FontAwesomeIcon icon ={faCoffee}/>My Teams</a>
                 </li>
                 <li className="nav-item">
                     <a className="nav-link text-muted" href="#">Tasks</a>

@@ -9,7 +9,7 @@ class MyTeam extends Component {
         return (
             <div className="card-deck upperDecks">
                 <div className="card">
-                    <div className="row no-gutters">
+                    <div className="row no-gutters p-3">
                         <div className="col-md-8">
                             <div className="card-body">
                                 <h4 className="card-title text-primary">28</h4>
@@ -18,12 +18,12 @@ class MyTeam extends Component {
                             </div>
                         </div>
                         <div className="col-md-4 mt-5">
-                            <img src="/images/logo.png" className="card-img-top" alt="..." />
+                            <img src="/images/members.png" className="card-img-top" alt="..." />
                         </div>
                     </div>
                 </div>
                 <div className="card">
-                    <div className="row no-gutters">
+                    <div className="row no-gutters p-3">
                         <div className="col-md-8">
                             <div className="card-body">
                                 <h4 className="card-title text-danger">12k<small className="text-muted perText">+26%</small></h4>
@@ -31,12 +31,12 @@ class MyTeam extends Component {
                             </div>
                         </div>
                         <div className="col-md-4 mt-5">
-                            <img src="/images/logo.png" className="card-img-top" alt="..." />
+                            <img src="/images/followers.png" className="card-img-top" alt="..." />
                         </div>
                     </div>
                 </div>
                 <div className="card">
-                    <div className="row no-gutters">
+                    <div className="row no-gutters p-3">
                         <div className="col-md-8">
                             <div className="card-body">
                                 <h4 className="card-title text-primary">12</h4>
@@ -52,7 +52,7 @@ class MyTeam extends Component {
                             </div>
                         </div>
                         <div className="col-md-4 mt-5">
-                            <img src="/images/logo.png" className="card-img-top" alt="..." />
+                            <img src="/images/tasks.png" className="card-img-top" alt="..." />
                         </div>
                     </div>
                 </div>

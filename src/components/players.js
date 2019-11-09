@@ -7,6 +7,9 @@ class Players extends Component {
 
     render() {
         return (
+            <React.Fragment>
+                <h2 className="font-weight-bold">Players</h2>
+                <p className="players text-muted"><small>July 03rd 2018 Friday</small></p>
             <div className="card-deck mt-4">
                 <div className="card">
                     <div className="card-body">
@@ -201,8 +204,11 @@ class Players extends Component {
                     </div>
                 </div>
             </div>
+            </React.Fragment>
         )
+    
     }
+    
 }
 
 export default Players;
