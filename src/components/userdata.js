@@ -25,7 +25,7 @@ class UserData extends Component {
                                 </div>
                                 <div className="col-md-1">
                                     <div className="btn-group">
-                                        <a href="#" className="" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                        <a href="#" className="color" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                                             ...
                                                  </a>
                                         <div className="dropdown-menu">

@@ -9,14 +9,20 @@ class ProgressBar extends Component {
 
     render() {
 
-        let data = this.props.data;
+        let value = this.props.data.value
+        let cssClass = "red"
+        if(value>79){
+            cssClass = "green"
+        }else if(value>39){
+            cssClass = "blue"
+        }
         return (
-            <div className = "progress mb-4 mt-1" >
-    <div className="progress-bar " role="progressbar" aria-valuenow={data.value} aria-valuemin="0" aria-valuemax="100" style={{ width: data.value }}>{data.value}</div>
+            <div className="progress mb-4 mt-1" >
+                <div className={"progress-bar " + cssClass} role="progressbar" aria-valuenow={value} aria-valuemin="0" aria-valuemax="100" style={{ width: value + "%" }}>{value}</div>
             </div>
 
         )
-}
+    }
 }
 
 
