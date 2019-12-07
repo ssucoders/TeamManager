@@ -4,12 +4,33 @@ import Logo from "./logo";
 import Sidenavbar from "./sidenav";
 import MyTeam from "./info";
 import Players from "./players"
-
+import { fetchTeams } from "../API";
+import TeamOverview from "./teamOverview";
 
 class DashBoard extends Component {
     constructor(props) {
         super(props);
-        this.state = {}
+        this.state = {
+            teams: [],
+            selectedTeam: null
+        }
+        this.setupTeams = this.setupTeams.bind(this)
+        this.selectTeam = this.selectTeam.bind(this)
+    }
+
+    setupTeams() {
+        var self = this;
+        fetchTeams().then((response) => {
+            self.setState({ teams: response.data })
+        });
+    }
+
+    selectTeam(team) {
+        this.setState({ selectedTeam: team })
+    }
+
+    componentDidMount(){
+        this.setupTeams();
     }
 
     render() {
@@ -18,18 +39,19 @@ class DashBoard extends Component {
                 <div className="row">
                     <div className="col-lg-3 leftPanel">
                         <Logo />
-                        <Sidenavbar />
+                        <Sidenavbar teams={this.state.teams} selectTeam={this.selectTeam} selectedTeam={this.state.selectedTeam} />
                     </div>
                     <div className="col-lg-9 rightPanel">
                         <div className="row">
-                            <h1 className="ml-3 font-weight-bold">My Teams</h1>
-                            <div className="topDataRight ml-auto">
-                                <small className="text-muted">Hi, Lundy</small>
+                            <h1 className="ml-3 font-weight-bold mt-3">My Teams</h1>
+                            <div className="topDataRight ml-auto mt-3">
+                                <small className="text-muted mt-">Hi, Lundy</small>
                                 <a href="#" className="topImage"><img src="images/logo.png" /></a>
                             </div>
                         </div>
-                        <MyTeam />
-                        <Players/>
+                        <TeamOverview team={this.state.selectedTeam} />
+                        {/* <MyTeam /> */}
+                        {/* <Players/> */}
                     </div>
                 </div>
             </React.Fragment>
