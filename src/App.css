@@ -1,10 +1,11 @@
 .App {
-    margin-top: 12px;
+    background: #f7f9fd;
+    /* margin-top: 12px; */
     font-family: Arial, Helvetica, sans-serif;
   }
-  .red{background:red;}
-  .blue{background:blue;}
-  .green{background:green;}
+  .red{background: -webkit-linear-gradient(left, #f282bc 0%,#e3576c 100%);}
+  .blue{background:-webkit-linear-gradient(left, #249aef 0%,#2c37f0 100%);}
+  .green{background:-webkit-linear-gradient(left, #9dff90 0%,#3dfd03 100%);}
   #logo>img{height: 60px;width: 70px;display: block;margin:auto;padding: 5px;}
   .logoText>b{color: black;}
   .clear{clear:both;}
@@ -18,12 +19,38 @@
   .logoText{text-align: center;display:block;}
   .logoText>p{font-size: 12px;}
   .crdText{margin-top: 80px;}
-  ul{padding: 0px;margin: 0px;}
+  /* ul{padding: 0px;margin: 0px;} */
   ul>li{list-style-type: circle;}
  .color{color: black;font-weight: bold;}
  .players{line-height: 1px;font-size: 12px;}
  .upperDecks{margin-top: 45px;margin-bottom: 45px;}
  .lowerDeckText{line-height: 0px;font-size: small;}
+ .card{border: none;}
+ .progress-custom {
+  display: table;
+  width: 100%;
+  margin-bottom: 18px; /*optionally same aside margin bottom of progress class*/
+}
+
+.progress-custom .progress{
+  margin-bottom: 0;
+  vertical-align: middle;
+  /* margin-bottom:15px; */
+  margin-top:10px;
+  height: 8px;
+}
+
+.progress-custom .progress-value{
+  display: table-cell;
+  width: 1%; 
+  padding: 0 5px; /*optionally*/
+  font-size: 10px;
+}
+
+.nav-item > .nav-link{
+  color:#8790c5 ;
+}
+.nav-item:hover .nav-link{background-color:#e8eaeb;color:#536cfe;}
   #sidebar-wrapper {
     min-height: 100vh;
     margin-left: -15rem;
@@ -56,9 +83,9 @@
       margin-left: 0;
     }
 
-    .on{
+    /* .on{
       color:#798cfe;
-    }
+    } */
   
     #page-content-wrapper {
       min-width: 0;
@@ -69,6 +96,37 @@
       margin-left: -15rem;
     }
   } 
+  /* .dropbtn {
+    padding: 16px;
+    font-size: 16px;
+    border: none;
+  }
+   */
+  /* .dropdown {
+    position: relative;
+    display: inline-block;
+  } */
+  
+  .dropdown-content {
+    display: none;
+    background-color: #f1f1f1;
+    min-width: 160px;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    z-index: 1;
+  }
+  
+  .dropdown-content a {
+    color: #8790c5;
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+  }
+  
+  .dropdown-content a:hover {background-color: #e8eaeb;}
+  
+  .dropdown:hover .dropdown-content {display: block;}
+  
+  .dropdown:hover .dropbtn {background-color:#e8eaeb;color:#536cfe;}
 
  
  /* #logo{background: url("/public/images/logo.png") no-repeat;height: 40px;width: 40px;display: block;text-indent: -999px;} */

@@ -1,6 +1,7 @@
 import React, {Component} from "react";
 import Team from "./team";
 import User from "./user";
+import Players from "./players";
 
 class TeamOverview extends Component{
     constructor(props){
@@ -31,11 +32,7 @@ class TeamOverview extends Component{
                                 </div>
                                 </div>
                         </div>
-                        <div className="card-deck">
-                                        {team.members.map((el, i)=>{
-                                          return (<User item={el} key={i} pointTypes={pointTypes} />)
-                                              })}
-                                    </div>
+                        <Players players={team.members} />
                     </React.Fragment>
             :null}
             </React.Fragment>

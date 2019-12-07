@@ -17,8 +17,13 @@ class ProgressBar extends Component {
             cssClass = "blue"
         }
         return (
-            <div className="progress mb-4 mt-1" >
-                <div className={"progress-bar " + cssClass} role="progressbar" aria-valuenow={value} aria-valuemin="0" aria-valuemax="100" style={{ width: value + "%" }}>{value}</div>
+            <div className="progress-custom">
+            <div className="progress" >
+            <div className={"progress-bar " + cssClass} role="progressbar" aria-valuenow={value} aria-valuemin="0" aria-valuemax="100" style={{ width: value + "%" }}></div>
+            </div>
+            <div className="progress-value text-muted">
+                {value + "%"}
+            </div>
             </div>
 
         )

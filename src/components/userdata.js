@@ -15,7 +15,7 @@ class UserData extends Component {
                         <div className="card-body">
                             <div className="row no-gutters">
                                 <div className="col-md-2">
-                                    <img src={"/images/" + data.image} className="card-img-top" alt="..." />
+                                    <img src={"/images/users/" + data.picture} className="card-img-top" alt="..." />
                                 </div>
                                 <div className="col-md-9">
                                     <div className="ml-2">
@@ -39,8 +39,8 @@ class UserData extends Component {
                                 </div>
                             </div>
                             <div className="clear"></div>
-                            <div className="row mt-2">
-                                <div className="col-md-4">
+                            <div className="row mt-2 ml-1">
+                                <div className="col-md-5 ">
                                     <small className="font-weight-bold lowerText">Followers</small><br />
                                     <small className="font-weight-bold text-danger">{data.followers}</small>
                                     <p className="bg-light rounded-pill text-danger lowerText"><small className="font-weight-bold  ml-2">{data.position}</small></p>
@@ -50,18 +50,18 @@ class UserData extends Component {
                                     <small className="font-weight-bold text-primary">{data.work}</small>
 
                                 </div>
-                                <div className="col-md-4">
+                                <div className="col-md-3">
                                     <small className="font-weight-bold lowerText">Task</small><br />
                                     <small className="font-weight-bold text-primary">02</small>
                                 </div>
                             </div>
                             <div className="row mt-2">
-                                <div className="col-md-4">
-                                    <p><small className="lowerText">UI/UX</small></p>
+                                <div className="col-md-3 pr-0">
+                                    <p><small className="lowerText ">UI/UX</small></p>
                                     <p><small className="lowerText">Animation</small></p>
                                     <p><small className="lowerText">Painting</small></p>
                                 </div>
-                                <div className="col-md-8">
+                                <div className="col-md-9">
                                     {data.progress.map((el , i)=>{
                                         return(<ProgressBar data={el} key={i}/>)
                                     })}
