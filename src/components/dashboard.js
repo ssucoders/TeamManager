@@ -6,6 +6,7 @@ import MyTeam from "./info";
 import Players from "./players"
 import { fetchTeams } from "../API";
 import TeamOverview from "./teamOverview";
+import Teams from "./teams";
 
 class DashBoard extends Component {
     constructor(props) {
@@ -49,7 +50,11 @@ class DashBoard extends Component {
                                 <a href="#" className="topImage"><img src="images/logo.png" /></a>
                             </div>
                         </div>
-                        <TeamOverview team={this.state.selectedTeam} />
+                        {this.state.selectedTeam? <TeamOverview team={this.state.selectedTeam} />:
+                        <Teams teams={this.state.teams} selectaction={this.selectTeam} />
+                        }
+                        
+                        
                         {/* <MyTeam /> */}
                         {/* <Players/> */}
                     </div>
