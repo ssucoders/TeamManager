@@ -20,14 +20,14 @@ class DashBoard extends Component {
     }
 
     setupTeams() {
-        var self = this;
+        var self = this;    //fetch all teams from API server
         fetchTeams().then((response) => {
             self.setState({ teams: response.data })
         });
     }
 
     selectTeam(team) {
-        this.setState({ selectedTeam: team })
+        this.setState({ selectedTeam: team }) //setstate team as selectedTeam
     }
 
     componentDidMount(){

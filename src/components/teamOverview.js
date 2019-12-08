@@ -11,7 +11,7 @@ class TeamOverview extends Component{
 
     render(){
         let team = this.props.team;
-        let {pointTypes} = this.props
+        // let {pointTypes} = this.props
         return (
             <React.Fragment>
                 {team?
@@ -32,7 +32,7 @@ class TeamOverview extends Component{
                                 </div>
                                 </div>
                         </div>
-                        <Players players={team.members} />
+                        <Players data={team.members} />
                     </React.Fragment>
             :null}
             </React.Fragment>

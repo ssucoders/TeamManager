@@ -14,7 +14,7 @@ class Sidenavbar extends Component {
                     <a className="nav-link" href="#">Overviews</a>
                 </li>
                 <li className="nav-item dropdown">
-                    <a className="nav-link dropbtn" href="#"><FontAwesomeIcon icon={faCoffee} />My Teams</a>
+                    <a className="nav-link dropbtn" href="#"  onClick={(e)=> this.props.selectTeam(null)} ><FontAwesomeIcon icon={faCoffee} />My Teams</a>
                     <div className="dropdown-content">
                     {
                         teams.map((el, i) => {

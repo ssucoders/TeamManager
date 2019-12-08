@@ -1,6 +1,5 @@
 import React, { Component } from "react";
 import Team from "./team";
-import TeamOverview from "./teamOverview";
 
 class Teams extends Component {
     constructor(props) {
@@ -10,7 +9,8 @@ class Teams extends Component {
     }
     
     render() {
-        let {pointTypes, teams, selectedTeam} = this.props
+        // let  {teams} = this.props
+        let teams = this.props.teams;
         return (
             <div>
                 <div className="card-deck" >
@@ -20,7 +20,6 @@ class Teams extends Component {
                         })
                     }
                 </div>
-                <TeamOverview team={selectedTeam} pointTypes={pointTypes} />
             </div>
         )
     }
