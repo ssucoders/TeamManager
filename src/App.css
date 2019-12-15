@@ -25,7 +25,16 @@
  .players{line-height: 1px;font-size: 12px;}
  .upperDecks{margin-top: 45px;margin-bottom: 45px;}
  .lowerDeckText{line-height: 0px;font-size: small;}
- .card{border: none;}
+ .fr{float: right;}
+ .closee{position: absolute;top:16px;right: 16px;font-size:18px;font-weight: bold;border-radius: 50%;border: none;background: #f0f5f9;}
+ .list-group-item{border: transparent;}
+ .form-control:valid{
+   background:#fafafc ;
+ }
+ .tasklist:hover{box-shadow: 8px 8px 8px rgb(202, 202, 202);}
+ .list{background-color: chartreuse;}
+ .task-done{text-decoration: line-through;}
+ .taskCard{width: 30rem;}
  .progress-custom {
   display: table;
   width: 100%;
