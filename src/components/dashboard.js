@@ -19,7 +19,6 @@ class DashBoard extends Component {
         }
         this.setupTeams = this.setupTeams.bind(this)
         this.selectTeam = this.selectTeam.bind(this)
-        this.handelClick=this.handelClick.bind(this)
     }
 
     setupTeams() {
@@ -36,11 +35,6 @@ class DashBoard extends Component {
     componentDidMount(){
         this.setupTeams();
     }
-
-    handelClick(e){
-        this.setState({showTaskManager:TaskManager})
-    }
-
     render() {
         return (
             <React.Fragment>

@@ -1,6 +1,7 @@
 import React, { Component } from "react";
 import Task from "./task"
 import { today, currentMonth, localTime } from "./time";
+import AddTasks from "./addtasks";
 
 
 class TaskManager extends Component {
@@ -93,23 +94,7 @@ class TaskManager extends Component {
                     <h2>Completed Tasks({completedTasks.length})</h2>
                     <p id="date"> {currentMonth()} {today()}</p>
                 </div>
-                <div className="card p-4 taskCard">
-                    <div className="card-body">
-                        <h3 className="card-title list-inline-item font-weight-bold">Add Task</h3>
-                        <button type="button" className="list-inline-item closee">x</button>
-                    </div>
-                    <ul className="list-group list-group-flush">
-                        <li className="list-group-item">
-                            <label className="text-muted">Title</label>
-                            <input type="text" placeholder="Add Tasks Title" value={this.state.value} onKeyDown={this.handleKeyDown} onChange={this.handleChange} className="form-control" />
-                        </li>
-                           <li className="list-group-item"><label className="text-muted">Notes</label>
-                            <textarea placeholder="Add Some Notes" className="form-control" value={this.state.notes} onKeyDown={this.handleKeyDown} onChange={this.handleNotesChange} rows="4"></textarea></li>
-                    </ul>
-                    <div className="list-group-item">
-                        <a href="#" className="btn btn-primary fr" onClick={this.addTask}>+ Add Task</a>
-                    </div>
-                </div>
+                <AddTasks tasks={this.state.tasks} value={this.state.value} notes={this.state.notes} onChange={this.handleChange} onKeyDown={this.handleKeyDown}/>
                 {tasks.length > 0 ? tasklist : <p>No tasks, add some Tasks</p>}
             </React.Fragment>
         )
