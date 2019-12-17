@@ -21,10 +21,10 @@ class Task extends Component {
                 <div  className={this.props.item.done ? "list-group-item  list " : "list-group-item tasklist"}>
                 <input type="checkbox"  checked={this.props.item.done} onChange={this.handleChange} />
                     <div className="d-flex w-100 justify-content-between">
-                        <h5 className="m-0 font-weight-bold">Task: {this.props.item.title}</h5>
+                        <h5 className="m-0 font-weight-bold">Title: {this.props.item.title}</h5>
                         <small><button className="del btn btn-danger" onClick={this.removeTask}>X</button></small>
                     </div>
-                <small className="text-muted">Note: {this.props.item.note}</small>
+                <small className="text-muted">Description: {this.props.item.description}</small>
                 </div>
             </div>
         )

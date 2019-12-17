@@ -1,6 +1,6 @@
 import React, { Component } from "react";
 import Task from "./task"
-import { today, currentMonth, localTime } from "./time";
+import { today, currentMonth } from "./time";
 import AddTasks from "./addtasks";
 
 
@@ -9,46 +9,28 @@ class TaskManager extends Component {
         super(props);
         this.state = {
             tasks: [],
-            value: "",
-            notes:""
+            showAddTasks: false
         }
         this.addTask = this.addTask.bind(this)
-        this.handleChange = this.handleChange.bind(this)
-        this.handleKeyDown = this.handleKeyDown.bind(this)
         this.deleteTask = this.deleteTask.bind(this)
         this.updateTaskStatus = this.updateTaskStatus.bind(this)
-        this.handleNotesChange = this.handleNotesChange.bind(this)
+        this.toggleAddTask = this.toggleAddTask.bind(this)
+        
     }
 
+    toggleAddTask(){
+        this.setState({showAddTasks: !this.state.showAddTasks});
+    }
 
-    addTask() {
-        if (this.state.value.trim().length && this.state.notes.length > 0) {
-            this.setState({
-                tasks: [{ title: this.state.value, note:this.state.notes, done: false, time: localTime() }, ...this.state.tasks],
-                value: "" , notes:""
-            })
+    addTask(task) {
+        if (task.title.trim().length && task.description.length > 0) {
+            this.setState({tasks: [task, ...this.state.tasks]})
         } else {
             alert("Please dont leave the fields empty")
         }
     }
 
-    handleChange(e) {
-        console.log(e.target.value)
-        this.setState({ value: e.target.value })
-    }
-
-    handleNotesChange(e){
-        console.log(e.target.value)
-        this.setState({notes:e.target.value})
-    }
-
-
-    handleKeyDown(e) {
-        console.log(e.which)
-        if (e.which === 13) {
-            this.addTask()
-        }
-    }
+    
 
 
     deleteTask(index) {
@@ -94,7 +76,7 @@ class TaskManager extends Component {
                     <h2>Completed Tasks({completedTasks.length})</h2>
                     <p id="date"> {currentMonth()} {today()}</p>
                 </div>
-                <AddTasks tasks={this.state.tasks} value={this.state.value} notes={this.state.notes} onChange={this.handleChange} onKeyDown={this.handleKeyDown}/>
+                {this.state.showAddTasks?<AddTasks tasks={this.state.tasks} addTask={this.addTask} hide={this.toggleAddTask} />: <button onClick={this.toggleAddTask}>Add Task</button>}
                 {tasks.length > 0 ? tasklist : <p>No tasks, add some Tasks</p>}
             </React.Fragment>
         )
