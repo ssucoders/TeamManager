@@ -52,11 +52,10 @@ class DashBoard extends Component {
                                 <a href="#" className="topImage"><img src="images/logo.png" /></a>
                             </div>
                         </div>
-                        {/* {this.state.selectedTeam? <TeamOverview team={this.state.selectedTeam} />:
+                         {/* {this.state.selectedTeam? <TeamOverview team={this.state.selectedTeam} />:
                         <Teams teams={this.state.teams} selectaction={this.selectTeam} />
-                        } */}
-                        {/* <TaskListing/> */}
-                        <TaskManager/>
+                        }  */}
+                        <TaskManager teams={this.state.teams}/>
                         
                         
 

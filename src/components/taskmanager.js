@@ -3,6 +3,29 @@ import Task from "./task"
 import { today, currentMonth } from "./time";
 import AddTasks from "./addtasks";
 
+function getMembers(teams) {
+    let members = [];
+    teams.map(el=>{
+        console.log("currentTeam", el)
+        el.members.map(me => {
+            //add check if memeber is already in members array, then don't push it
+            if(checkIfItemExists(members, me, "id")==false){
+                members.push(me);
+            }
+        })
+    })
+    return members;
+}
+
+function checkIfItemExists(items, item, prop){
+    let exists = false;
+    items.map(el=>{
+        if(el[prop] == item[prop]){
+            exists = true;
+        }
+    })
+    return exists;
+}
 
 class TaskManager extends Component {
     constructor(props) {
@@ -15,22 +38,22 @@ class TaskManager extends Component {
         this.deleteTask = this.deleteTask.bind(this)
         this.updateTaskStatus = this.updateTaskStatus.bind(this)
         this.toggleAddTask = this.toggleAddTask.bind(this)
-        
+
     }
 
-    toggleAddTask(){
-        this.setState({showAddTasks: !this.state.showAddTasks});
+    toggleAddTask() {
+        this.setState({ showAddTasks: !this.state.showAddTasks });
     }
 
     addTask(task) {
         if (task.title.trim().length && task.description.length > 0) {
-            this.setState({tasks: [task, ...this.state.tasks]})
+            this.setState({ tasks: [task, ...this.state.tasks] })
         } else {
             alert("Please dont leave the fields empty")
         }
     }
 
-    
+
 
 
     deleteTask(index) {
@@ -56,6 +79,7 @@ class TaskManager extends Component {
     }
 
     render() {
+        let members = getMembers(this.props.teams);
 
         let tasks = this.state.tasks;
         let completedTasks = tasks.filter(el => {
@@ -71,13 +95,18 @@ class TaskManager extends Component {
 
         return (
             <React.Fragment>
-                <div>
-                    <h1>All Tasks ({tasks.length})</h1>
-                    <h2>Completed Tasks({completedTasks.length})</h2>
-                    <p id="date"> {currentMonth()} {today()}</p>
+                <div className="mt-3">
+                <ul className="list-inline group-horizontal-md fr">
+                    <li className="list-inline-item"></li>
+                    <li className="list-inline-item font-weight-bold ml-3">All Tasks ({tasks.length})</li>
+                    <li className="list-inline-item font-weight-bold ml-3">Completed Tasks({completedTasks.length})</li>
+                    <li className="list-inline-item ml-3" ><small className="text-muted" id="date">{currentMonth()} {today()}</small></li>
+                </ul>
+                <div className="addtask  mb-2">
+                {this.state.showAddTasks ? <AddTasks data={members} tasks={this.state.tasks} addTask={this.addTask} hide={this.toggleAddTask} /> : <button className="btn btn-primary list-inline-item" onClick={this.toggleAddTask}>+ Add Task</button>}
                 </div>
-                {this.state.showAddTasks?<AddTasks tasks={this.state.tasks} addTask={this.addTask} hide={this.toggleAddTask} />: <button onClick={this.toggleAddTask}>Add Task</button>}
-                {tasks.length > 0 ? tasklist : <p>No tasks, add some Tasks</p>}
+                {tasks.length > 0 ? tasklist : <p className="text-muted">No tasks, add some Tasks</p>}  
+                </div>
             </React.Fragment>
         )
     }

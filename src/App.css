@@ -26,12 +26,12 @@
  .upperDecks{margin-top: 45px;margin-bottom: 45px;}
  .lowerDeckText{line-height: 0px;font-size: small;}
  .fr{float: right;}
- .closee{position: absolute;top:16px;right: 16px;font-size:18px;font-weight: bold;border-radius: 50%;border: none;background: #f0f5f9;}
  .list-group-item{border: transparent;}
  .form-control:valid{
    background:#fafafc ;
  }
- .tasklist:hover{box-shadow: 8px 8px 8px rgb(202, 202, 202);}
+ .adjust{max-width: 80ch;overflow: hidden;white-space: nowrap;}
+ .tasklist:hover{box-shadow: 8px 8px 8px rgb(202, 202, 202);background-color:#f1f1f1 ;}
  .list{background-color: chartreuse;}
  .task-done{text-decoration: line-through;}
  .taskCard{width: 30rem;}
