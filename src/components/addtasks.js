@@ -43,7 +43,7 @@ class AddTasks extends Component {
             <div className="card p-4 taskCard mb-4 mt-3">
                 <div className="card-body">
                     <h3 className="card-title list-inline-item font-weight-bold">Add Task</h3>
-                    <button type="button" className="list-inline-item" onClick={this.props.hide}>x</button>
+                    <button type="button" className="list-inline-item close" onClick={this.props.hide}>x</button>
                 </div>
                 <ul className="list-group list-group-flush">
                     <li className="list-group-item">
